@@ -4,6 +4,4 @@
 
 [node name="GridMatch" type="Node2D"]
 script = ExtResource( 1 )
-column = 7
-row = 7
 space_pieces = 80

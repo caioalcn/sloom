@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://scripts/Piece.gd" type="Script" id=1]
+[ext_resource path="res://assets/shop badge.png" type="Texture" id=2]
+[ext_resource path="res://assets/frame for icons.png" type="Texture" id=3]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 33.5, 30 )
+
+[node name="BadgePiece" type="Node2D"]
+script = ExtResource( 1 )
+type = 2
+
+[node name="SelectionSprite" type="Sprite" parent="."]
+visible = false
+modulate = Color( 0, 0.0196078, 1, 1 )
+scale = Vector2( 0.268, 0.222222 )
+texture = ExtResource( 3 )
+
+[node name="Sprite" type="Sprite" parent="."]
+scale = Vector2( 0.558333, 0.497917 )
+texture = ExtResource( 2 )
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource( 1 )
+
+[connection signal="input_event" from="Area2D" to="." method="_on_selected_input_event"]

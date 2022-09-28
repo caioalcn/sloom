@@ -9,6 +9,7 @@
 [node name="Level" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+mouse_filter = 2
 __meta__ = {
 "_edit_lock_": true
 }
@@ -17,6 +18,7 @@ __meta__ = {
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_top = -911.0
+mouse_filter = 2
 texture = ExtResource( 1 )
 expand = true
 stretch_mode = 7
@@ -30,6 +32,7 @@ margin_left = 20.0
 margin_top = 960.0
 margin_right = -20.0
 margin_bottom = -150.0
+mouse_filter = 2
 texture = ExtResource( 5 )
 expand = true
 stretch_mode = 1
@@ -38,8 +41,10 @@ __meta__ = {
 }
 
 [node name="GridMatch" parent="." instance=ExtResource( 3 )]
+row_number = 7
+column_number = 7
 space_pieces = 140
 position_x = 120
-position_y = 1920
+position_y = 1060
 
 [node name="BottomControl" parent="." instance=ExtResource( 2 )]
